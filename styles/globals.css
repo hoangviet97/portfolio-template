@@ -1,26 +1,141 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1,
+h2,
+h3 {
+  padding-top: 20px;
+  padding-bottom: 8px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+h1 {
+  @apply text-4xl;
+}
+h2 {
+  @apply text-2xl;
+}
+h3 {
+  @apply text-xl;
 }
 
-* {
-  box-sizing: border-box;
+p {
+  padding-bottom: 8px;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.home-text {
+  animation-name: txt;
+  animation-duration: 1.6s;
+  animation-timing-function: ease;
+}
+
+.home-text2 {
+  animation-name: txt;
+  animation-duration: 1.3s;
+}
+
+@keyframes txt {
+  0% {
+    transform: translateY(-80px);
+    opacity: 0;
   }
-  body {
-    color: white;
-    background: black;
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
+}
+
+@keyframes txt2 {
+  from {
+    transform: translateY(-100px);
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.bg {
+  background-image: url(../public/assets/bg.png);
+  width: 100%;
+  height: 100%;
+}
+
+.bg-dark {
+  background-image: url(../public/assets/bg-dark.png);
+  width: 100%;
+  height: 100%;
+}
+
+.about-img {
+  animation: floatingImage 6s ease-in-out infinite;
+  transform: rotate(15deg);
+}
+
+@keyframes floatingImage {
+  0% {
+    transform: translateY(0rem) translateX(0rem);
+  }
+
+  50% {
+    transform: translateY(2rem) translateX(-1rem);
+  }
+
+  100% {
+    transform: translateY(0rem) translateX(0rem);
+  }
+}
+
+.slider {
+  animation: sliderList 8s linear infinite;
+}
+
+@keyframes sliderList {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.up-anim {
+  animation-name: project-anim;
+  animation-duration: 0.5s;
+}
+
+@keyframes project-anim {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.pagination {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.page-num {
+  cursor: pointer;
+  margin: 8px 10px;
+  outline: none;
 }
