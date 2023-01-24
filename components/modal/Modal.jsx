@@ -26,15 +26,15 @@ const Modal = ({ open, close, project }) => {
               <div className="mb-[20px]">
                 <h3 className="text-teal-400 font-bold mb-1">Technologies</h3>
                 <div className="flex flex-wrap gap-1">
-                  {project.stack.map((item) => (
-                    <Tag item={item} />
+                  {project.stack.map((item, index) => (
+                    <Tag key={index} item={item} />
                   ))}
                 </div>
               </div>
               <div className="mb-[20px]">
                 <h3 className="text-teal-400 font-bold mb-1">Link</h3>
                 <a href={project.url} className="text-slate-200">
-                  www.envato.com
+                  www.example.com
                 </a>
               </div>
             </div>

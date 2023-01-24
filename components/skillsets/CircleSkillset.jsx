@@ -7,8 +7,8 @@ const CircleSkillset = () => {
 
   return (
     <div className="grid grid-cols-3 gap-10">
-      {data.languages.map((item) => (
-        <ProgressCircle item={item} />
+      {data.languages.map((item, index) => (
+        <ProgressCircle key={index} item={item} />
       ))}
     </div>
   );

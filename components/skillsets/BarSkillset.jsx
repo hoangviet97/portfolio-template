@@ -6,8 +6,8 @@ const BarSkillset = () => {
 
   return (
     <div>
-      {data.skills.map((item) => (
-        <ProgressBar item={item} />
+      {data.skills.map((item, index) => (
+        <ProgressBar key={index} item={item} />
       ))}
     </div>
   );

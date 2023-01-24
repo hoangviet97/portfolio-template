@@ -52,8 +52,8 @@ const index = () => {
             <div>
               <h3 className="text-teal-400 font-bold">Education</h3>
               <div>
-                {data.resume.template.education.map((item) => (
-                  <div className="grid grid-cols-4">
+                {data.resume.template.education.map((item, index) => (
+                  <div key={index} className="grid grid-cols-4">
                     <div className="col-span-3">{item.school_name}</div>
                     <div className="col-span-1 text-right">
                       {item.start} - {item.end}

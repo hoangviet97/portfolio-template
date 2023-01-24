@@ -7,8 +7,8 @@ const ProjectTemplate1 = () => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
-      {data.projects.map((project) => (
-        <ProjectTemplate1Card project={project} />
+      {data.projects.map((project, index) => (
+        <ProjectTemplate1Card key={index} project={project} />
       ))}
     </div>
   );
