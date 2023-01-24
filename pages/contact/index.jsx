@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Image from "next/image";
 import { AppContext } from "../../context/AppContext";
 
-const index = () => {
+const Index = () => {
   const data = useContext(AppContext);
 
   return (
@@ -68,4 +68,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

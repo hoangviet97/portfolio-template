@@ -7,7 +7,7 @@ import BlogList from "../../components/blog/blogList/BlogList";
 import BlogPostOne from "../../components/blog/blogPost/BlogPostOne";
 import Footer from "../../components/footer/Footer";
 
-const index = ({ posts }) => {
+const Index = ({ posts }) => {
   const [searchText, setSearchText] = useState("");
   const [filteredData, setFilteredData] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -95,4 +95,4 @@ export async function getStaticProps() {
   };
 }
 
-export default index;
+export default Index;
