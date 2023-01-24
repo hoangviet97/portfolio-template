@@ -23,7 +23,7 @@ const AboutTemplate1 = () => {
         <div className="col-span-1 max-w-[100%] lg:max-w-[85%] mt-[80px] lg:mt-0 flex items-center">
           <div className="mx-auto text-justify">
             <h2 className="text-6xl text-center lg:text-left text-teal-400 font-bold mb-[30px]">Who am I?</h2>
-            <p className="mb-[10px] dark:text-slate-400">I'm an experienced full-stack developer from Czech Republic. During my free time I enjoy solve difficult problems and improve my skills.</p>
+            <p className="mb-[10px] dark:text-slate-400">I&apos;m an experienced full-stack developer from Czech Republic. During my free time I enjoy solve difficult problems and improve my skills.</p>
             <p className="mb-[10px] dark:text-slate-400">Graduated from Harvard college with master degree in Information Technology with concentration in web development. I mainly focus on javascript based technologies. I provide clean code, reusable components and pixel perfect design.</p>
             <div className="flex justify-between lg:grid md:grid-cols-4 gap-[20px] mt-[60px] lg:mt-[20px] mx-auto">
               {data.highlightStatistics.map((item, index) => (
