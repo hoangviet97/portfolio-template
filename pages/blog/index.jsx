@@ -56,8 +56,8 @@ const Index = ({ posts }) => {
                 </a>{" "}
                 <span className="text-teal-400">({posts.length})</span>
               </li>
-              {categories.map((item) => (
-                <li>
+              {categories.map((item, index) => (
+                <li key={index}>
                   <a onClick={() => filterCategory(item.category)} className="text-slate-200 hover:text-slate-400 cursor-pointer">
                     {item.category}
                   </a>{" "}

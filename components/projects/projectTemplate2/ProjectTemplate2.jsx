@@ -17,7 +17,7 @@ const ProjectTemplate2 = () => {
       <div className="mb-[50px]">
         <div className="flex justify-center gap-[30px]">
           {data.project_categories.map((item, index) => (
-            <button className="outline-none" onClick={() => setSelected(item)}>
+            <button key={index} className="outline-none" onClick={() => setSelected(item)}>
               {item}
             </button>
           ))}
