@@ -30,8 +30,8 @@ const BlogList = ({ filteredData, searchText }) => {
           .filter((item) => {
             return item.frontmatter.title.toLowerCase().includes(searchText.toLowerCase());
           })
-          .map((post) => (
-            <BlogPostOne post={post} />
+          .map((post, index) => (
+            <BlogPostOne key={index} post={post} />
           ))}
       </div>
       <ReactPaginate breakLabel="..." nextLabel="next >" onPageChange={handlePageClick} pageRangeDisplayed={3} pageCount={pageCount} previousLabel="< previous" renderOnZeroPageCount={null} containerClassName="pagination" pageLinkClassName="page-num" previousLinkClassName="page-num" nextLinkClassName="page-num" activeLinkClassName="active-page" />

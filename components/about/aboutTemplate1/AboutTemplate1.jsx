@@ -26,8 +26,8 @@ const AboutTemplate1 = () => {
             <p className="mb-[10px] dark:text-slate-400">I'm an experienced full-stack developer from Czech Republic. During my free time I enjoy solve difficult problems and improve my skills.</p>
             <p className="mb-[10px] dark:text-slate-400">Graduated from Harvard college with master degree in Information Technology with concentration in web development. I mainly focus on javascript based technologies. I provide clean code, reusable components and pixel perfect design.</p>
             <div className="flex justify-between lg:grid md:grid-cols-4 gap-[20px] mt-[60px] lg:mt-[20px] mx-auto">
-              {data.highlightStatistics.map((item) => (
-                <div className="max-w-[100px] flex flex-col items-center lg:block">
+              {data.highlightStatistics.map((item, index) => (
+                <div key={index} className="max-w-[100px] flex flex-col items-center lg:block">
                   <div className="text-5xl text-teal-400 mb-[8px]">
                     <CountUp end={item.number} duration={1} />
                   </div>
@@ -53,8 +53,8 @@ const AboutTemplate1 = () => {
           <h2 className="text-6xl text-teal-400 font-bold mb-[30px]">What I do</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {data.services.map((service) => (
-            <ServiceCard service={service} />
+          {data.services.map((service, index) => (
+            <ServiceCard key={index} service={service} />
           ))}
         </div>
       </div>

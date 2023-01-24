@@ -27,8 +27,8 @@ const ProjectTemplate2 = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-[60px]">
           {data.projects
             .filter((item) => item.category === selected)
-            .map((item) => (
-              <ProjectTemplate2Card project={item} />
+            .map((item, index) => (
+              <ProjectTemplate2Card key={index} project={item} />
             ))}
         </div>
       </div>
